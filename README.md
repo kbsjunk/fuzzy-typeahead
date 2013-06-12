@@ -1,12 +1,14 @@
 Fuzzy Typeahead for Twitter Bootstrap
 ===============
 
-Similar to Sublime Text's command palete, Fuzzy Typeahead for Twitter Bootstrap will allow you to type part of the desired item's text to select it, rather than the exact text.
+Similar to Sublime Text's command palete, Fuzzy Typeahead for Twitter Bootstrap will allow you to type any non-contiguous parts of the desired item's text to select it, rather than the exact text.
+
+For example, in a list of US states, you would usually have to type "ALAS" to distinguish between Alaska and Alabama. With Fuzzy Typeahead, you can type "ALS"
 
 Demo
 -------
 
-See 
+See working demo at [JSFiddle](http://fiddle.jshell.net/zY7PQ/show/) (or [full source](http://fiddle.jshell.net/zY7PQ)).
 
 Usage
 -----
@@ -28,7 +30,7 @@ $('#typeahead').typeahead({
 Options
 -------
 
-By default, the `fuzzyHighlighter()` will only highlight the matching portions of the text you have entered, e.g. ALK = **Al**as**k**a. To join the highlighting from the first to the last match e.g. **Alask**a, use `true` as the last parameter for the `fuzzyHighlighter()` function:
+By default, the `fuzzyHighlighter()` will only highlight the matching portions of the text you have entered, e.g. "ALK" = <strong>Al</strong>as<strong>k</strong>a. To join the highlighting from the first to the last match e.g. **Alask**a, use `true` as the last parameter for the `fuzzyHighlighter()` function:
 
 ```javascript
 fuzzyHighlighter(item, this.query, true);
