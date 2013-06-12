@@ -1,13 +1,16 @@
-function fuzzyMatcher(item, query, fuzziness) {
+function fuzzyMatcher(item, query, fuzziness, pinStart) {
     fuzziness = regexFuzziness(fuzziness);
+    pinStart = regexPinStart(pinStart);
 
     var pattern = query.split("").join("." + fuzziness);
-    var regex = new RegExp("^" + pattern, "img");
+    var regex = new RegExp(pinStart + pattern, "img");
     return regex.test(item);
 }
 
-function fuzzyHighlighter(item, query, joinHighlight, fuzziness) {
+function fuzzyHighlighter(item, query, joinHighlight, fuzziness, pinStart) {
     fuzziness = regexFuzziness(fuzziness);
+    pinStart = regexPinStart(pinStart);
+    
     var pattern = query.split("");
     var replace = '';
     if (joinHighlight === true) {
@@ -20,7 +23,7 @@ function fuzzyHighlighter(item, query, joinHighlight, fuzziness) {
         }
         pattern = "(" + pattern.join(")(." + fuzziness + ")(") + ")(.*)";
     }
-    var regex = new RegExp("^" + pattern, "img");
+    var regex = new RegExp(pinStart + pattern, "img");
     return item.replace(regex, replace);
 }
 
@@ -28,7 +31,12 @@ function regexFuzziness(fuzziness) {
     if (isNaN(fuzziness)) {
         fuzziness = "*?";
     } else {
-        fuzziness = "{0," + fuzziness + "}";
+        fuzziness = "{0," + parseInt(fuzziness) + "}";
     }
     return fuzziness;
+}
+function regexPinStart(pinStart) {
+    if (pinStart === true) {
+        return "^";
+    }
 }
