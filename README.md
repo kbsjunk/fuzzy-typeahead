@@ -1,3 +1,7 @@
+**Important!** This is just an experiment with Twitter Bootstrap and getting familiar with GitHub.
+
+It is certainly not designed for production use but feel free to work on the idea and improve the execution!
+
 Fuzzy Typeahead for Twitter Bootstrap
 ===============
 
@@ -51,3 +55,9 @@ By default, the `fuzzyMatcher()` will search from the beginning of the string, m
 fuzzyMatcher(item, this.query, 3, true);
 fuzzyHighlighter(item, this.query, true, 3, true);
 ```
+
+Next Steps
+----------
+- [x] Better customisation through options
+- [ ] Convert options into object allowing default and better handling of omitted parameters
+- [ ] Build into proper standalone Boostrap widget
