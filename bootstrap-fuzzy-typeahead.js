@@ -36,7 +36,7 @@ function regexFuzziness(fuzziness) {
     return fuzziness;
 }
 function regexPinStart(pinStart) {
-    if (pinStart === true) {
+    if (pinStart !== false) {
         return "^";
     }
 }
