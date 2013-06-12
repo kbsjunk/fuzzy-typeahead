@@ -43,3 +43,11 @@ By default, the `fuzzyMatcher()` will find all items containing the letters you 
 fuzzyMatcher(item, this.query, 3);
 fuzzyHighlighter(item, this.query, true, 3);
 ```
+
+### Pin to Start
+By default, the `fuzzyMatcher()` will search from the beginning of the string, meaning that "NEW" will only be found in <strong>New</strong> Caledonia, but not Papua <strong>New</strong> Guinea. To allow the search to begin in the middle of the item text, use `true` as the fourth parameter for the `fuzzyMatcher()` **and** fifth parameter for the `fuzzyHighlighter()` functions:
+
+```javascript
+fuzzyMatcher(item, this.query, 3, true);
+fuzzyHighlighter(item, this.query, true, 3, true);
+```
