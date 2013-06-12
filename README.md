@@ -1,7 +1,12 @@
 Fuzzy Typeahead for Twitter Bootstrap
 ===============
 
-Similar to Sublime Text's command palete, Fuzzy Typeahead for Twitter Bootstrap will allow you to type
+Similar to Sublime Text's command palete, Fuzzy Typeahead for Twitter Bootstrap will allow you to type part of the desired item's text to select it, rather than the exact text.
+
+Demo
+-------
+
+See 
 
 Usage
 -----
