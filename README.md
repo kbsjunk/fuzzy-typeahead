@@ -8,7 +8,7 @@ For example, in a list of US states, you would usually have to type "ALAS" to di
 Demo
 -------
 
-See working demo at [JSFiddle](http://fiddle.jshell.net/4LRjU/show) (or [full source](http://fiddle.jshell.net/4LRjU)).
+See working demo at [JSFiddle](http://fiddle.jshell.net/YHfPf/show) (or [full source](http://fiddle.jshell.net/YHfPf)).
 
 Usage
 -----
