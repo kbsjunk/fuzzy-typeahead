@@ -3,7 +3,7 @@ Fuzzy Typeahead for Twitter Bootstrap
 
 Similar to Sublime Text's command palete, Fuzzy Typeahead for Twitter Bootstrap will allow you to type any non-contiguous parts of the desired item's text to select it, rather than the exact text.
 
-For example, in a list of US states, you would usually have to type "ALAS" to distinguish between Alaska and Alabama. With Fuzzy Typeahead, you can type "ALS" and get the result you want. It can be more useful for longer strings in the 
+For example, in a list of US states, you would usually have to type "ALAS" to distinguish between Alaska and Alabama. With Fuzzy Typeahead, you can type "ALS" and get the result you want.
 
 Demo
 -------
@@ -30,14 +30,14 @@ $('#typeahead').typeahead({
 Options
 -------
 ### Join Highlight
-By default, the `fuzzyHighlighter()` will only highlight the matching portions of the text you have entered, e.g. "ALK" = <strong>Al</strong>as<strong>k</strong>a. To join the highlighting from the first to the last match e.g. **Alask**a, use `true` as the third parameter for the `fuzzyHighlighter()` function:
+By default, the `fuzzyHighlighter()` will only highlight the matching portions of the text you have entered, e.g. "ALK" will display <strong>Al</strong>as<strong>k</strong>a. To join the highlighting from the first to the last match e.g. <strong>Alask</strong>a, use `true` as the third parameter for the `fuzzyHighlighter()` function:
 
 ```javascript
 fuzzyHighlighter(item, this.query, true);
 ```
 
 ### Fuzziness
-By default, the `fuzzyMatcher()` will find all items containing the letters you have entered, regardless of how far apart they are in the item text, e.g. "SOL" = <strong>So</strong>uth Georgia and the South Sandwich Is<strong>l</strong>ands. To reduce the incidence of unlikely matches such as the previous example, use a number (lower number = search closer together) as the third parameter for the `fuzzyMatcher()` **and** fourth parameter for the `fuzzyHighlighter()` functions:
+By default, the `fuzzyMatcher()` will find all items containing the letters you have entered, regardless of how far apart they are in the item text, e.g. "SOL" will find <strong>So</strong>uth Georgia and the South Sandwich Is<strong>l</strong>ands. To reduce the incidence of unlikely matches such as the previous example, use a whole number (lower number = stricter) as the third parameter for the `fuzzyMatcher()` **and** fourth parameter for the `fuzzyHighlighter()` functions:
 
 ```javascript
 fuzzyMatcher(item, this.query, 3);
