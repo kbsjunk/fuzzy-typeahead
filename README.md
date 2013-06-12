@@ -58,6 +58,5 @@ fuzzyHighlighter(item, this.query, true, 3, true);
 
 Next Steps
 ----------
-- [x] Better customisation through options
-- [ ] Convert options into object allowing default and better handling of omitted parameters
-- [ ] Build into proper standalone Boostrap widget
+- Convert options into object allowing default and better handling of omitted parameters
+- Build into proper standalone Boostrap widget
