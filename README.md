@@ -41,7 +41,7 @@ fuzzyHighlighter(item, this.query, true);
 ```
 
 ### Fuzziness
-By default, the `fuzzyMatcher()` will find all items containing the letters you have entered, regardless of how far apart they are in the item text, e.g. "SOL" will find <strong>So</strong>uth Georgia and the South Sandwich Is<strong>l</strong>ands. To reduce the incidence of unlikely matches such as the previous example, use a whole number (lower number = stricter) as the third parameter for the `fuzzyMatcher()` **and** fourth parameter for the `fuzzyHighlighter()` functions:
+By default, the `fuzzyMatcher()` will find all items containing the letters you have entered, regardless of how far apart they are in the item text, e.g. "SOL" will find <strong>So</strong>uth Georgia and the <strong>So</strong>uth Sandwich Is<strong>l</strong>ands. To reduce the incidence of unlikely matches such as the previous example, use a whole number (lower number = stricter) as the third parameter for the `fuzzyMatcher()` **and** fourth parameter for the `fuzzyHighlighter()` functions:
 
 ```javascript
 fuzzyMatcher(item, this.query, 3);
@@ -49,11 +49,11 @@ fuzzyHighlighter(item, this.query, true, 3);
 ```
 
 ### Pin to Start
-By default, the `fuzzyMatcher()` will search from the beginning of the string, meaning that "NEW" will only be found in <strong>New</strong> Caledonia, but not Papua <strong>New</strong> Guinea. To allow the search to begin in the middle of the item text, use `true` as the fourth parameter for the `fuzzyMatcher()` **and** fifth parameter for the `fuzzyHighlighter()` functions:
+By default, the `fuzzyMatcher()` will search from the beginning of the string, meaning that "NEW" will only be found in <strong>New</strong> Caledonia, but not Papua <strong>New</strong> Guinea. To allow the search to begin in the middle of the item text, use `false` as the fourth parameter for the `fuzzyMatcher()` **and** fifth parameter for the `fuzzyHighlighter()` functions:
 
 ```javascript
-fuzzyMatcher(item, this.query, 3, true);
-fuzzyHighlighter(item, this.query, true, 3, true);
+fuzzyMatcher(item, this.query, 3, false);
+fuzzyHighlighter(item, this.query, true, 3, false);
 ```
 
 Next Steps
