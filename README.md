@@ -41,7 +41,7 @@ fuzzyHighlighter(item, this.query, true);
 ```
 
 ### Fuzziness
-By default, the `fuzzyMatcher()` will find all items containing the letters you have entered, regardless of how far apart they are in the item text, e.g. "SOL" will find <strong>So</strong>uth Georgia and the South Sandwich Is<strong>l</strong>ands. To reduce the incidence of unlikely matches such as the previous example, use a whole number (lower number = stricter) as the third parameter for the `fuzzyMatcher()` **and** fourth parameter for the `fuzzyHighlighter()` functions:
+By default, the `fuzzyMatcher()` will find all items containing the letters you have entered, regardless of how far apart they are in the item text, e.g. "SOL" will find <strong>So</strong>uth Georgia and the <strong>So</strong>uth Sandwich Is<strong>l</strong>ands. To reduce the incidence of unlikely matches such as the previous example, use a whole number (lower number = stricter) as the third parameter for the `fuzzyMatcher()` **and** fourth parameter for the `fuzzyHighlighter()` functions:
 
 ```javascript
 fuzzyMatcher(item, this.query, 3);
